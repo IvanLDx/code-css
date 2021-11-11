@@ -1,0 +1,54 @@
+:root {
+	--black: #282923;
+	--red: #f92772;
+	--green: #A7E22E;
+	--blue: #66D9EE;
+	--orange: #FE9720;
+	--purple: #AE82FE;
+	--yellow: #E7DB74;
+	--grey: #74705D;
+}
+
+.code {
+	background: var(--black);
+	padding: 2rem;
+	border-radius: 3px;
+	font-family: "Consolas";
+	color: var(--bc);
+	font-size: .96rem;
+	line-height: 1.4rem;
+	position: relative;
+}
+
+.code.copiado:not(.sencopia) {
+	transition: 0s;
+	filter: brightness(260%);
+}
+
+.code:not(.sencopia)::after {
+	content: "Copia o código";
+	position: absolute;
+	right: .6rem;
+	top: .2rem;
+	cursor: pointer;
+	color: rgba(255,255,255,.4);
+	transition: .2s;
+	z-index: 10;
+}
+
+.code:hover::after {
+	color: var(--bc);
+}
+
+
+.code-red { color: var(--red); }
+.code-green { color: var(--green); }
+.code-blue { color: var(--blue); }
+.code-orange { color: var(--orange); }
+.code-purple { color: var(--purple); }
+.code-yellow { color: var(--yellow); }
+.code-grey {color: var(--grey);}
+.code-italic {
+	font-style: italic;
+	color: var(--blue);
+}
